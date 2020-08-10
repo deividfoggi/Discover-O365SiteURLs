@@ -94,7 +94,8 @@ $okButton_OnClick = {
     }
     else{
         $labelResultOwner.Text = $oneDriveURLRequest.owner.user.displayName
-        $labelResultOneDriveURL.Text = $oneDriveURLRequest.webUrl
+        $lastDir = $oneDriveURLRequest.webUrl.split("/").split("/")[-1]
+        $labelResultOneDriveURL.Text = $oneDriveURLRequest.webUrl.Replace($lastDir,"")
     }
     $form.Text = 'OneDrive URL finder'
     $form.Update()
