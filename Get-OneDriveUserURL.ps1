@@ -147,11 +147,11 @@ $form.Controls.Add($labelResultOneDriveURL)
 
 $form.Topmost = $true
 
-$form.Add_Shown({$textBox.Select()})
+$form.Add_Shown({$textBoxUPN.Select()})
 $result = $form.ShowDialog()
 
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $textBox.Text
+    $x = $textBoxUPN.Text
     $x
 }
